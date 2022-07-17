@@ -1,4 +1,5 @@
 # JinWeb
+![JinWeb](https://www.kuko.icu/API/JinWeb/icon.png)
 Jin-Web 基于fastapi实现的局域网文件共享
 
 # 作者 PYmili
