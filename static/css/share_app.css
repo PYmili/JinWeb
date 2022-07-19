@@ -1,0 +1,16 @@
+body {
+	background: url("/static/image/shareappbg.jpg") no-repeat center 0px;
+	background-size: cover; 
+}
+
+ul {
+	list-style: none;
+}
+
+li p {
+	text-align: center;
+	border-style: outset;
+	border-radius: 50px;
+	width: 300px;
+	font-size: 20px;
+}

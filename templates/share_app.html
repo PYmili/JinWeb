@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', path='/css/share_app.css') }}" />
+	<title>ShareApp</title>
+</head>
+<body>
+	{% for key, value in Files.items() %}
+		<ul>
+			<li>
+				<p style="color: #ffff00;">
+				{% if value['file'].split('/')[-1].split('.')[-1] in ['jpg', 'png', 'gif', 'jpeg']: %}
+					{% if value['key'] == "None": %}
+						<a href="{{ value['file'] }}" download="{{ value['file'].split('/')[-1] }}">
+							<img src="{{ value['file'] }}" width="100" alt="{{ key }}"/>
+						</a>
+					{% else: %}
+						<a href="/download/{{ key }}">
+							{{ key }}
+						</a>
+					{% endif %}
+				{% else: %}
+					{% if value['key'] == "None": %}
+						<a href="{{ value['file'] }}">{{ key }}</a>
+					{% else: %}
+						<a href="/download/{{ key }}">{{ key }}</a>
+					{% endif %}
+				{% endif %}
+				分享者：{{ value['user'] }}
+				</p>
+			</li>
+		</ul>
+	{% endfor %}
+</body>
+</html>
