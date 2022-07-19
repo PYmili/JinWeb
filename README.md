@@ -15,7 +15,8 @@ Jin-Web 基于fastapi实现的局域网文件共享
 
 # 正常系统
 ### windows 10 经过测试运行正常
-### linux 正在测试
+### linux Ubuntu 正常运行
+## linux CentOs 正在测试
 
 # 命令行文档 
 
